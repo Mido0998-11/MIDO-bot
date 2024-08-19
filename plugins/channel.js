@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
 
-m.reply(`*قناتي على الواتساب:*\n
-https://whatsapp.com/channel/0029VaX4b6J7DAWqt3Hhu01A
+m.reply(`*تابع 𝙈𝙄𝘿𝙊علي واتس:*\n
+https://whatsapp.com/channel/0029Vaich7vLdQeUgMMBPc13
 *تابعني هناك♥*`)
 }
 handler.help = ['channel']
