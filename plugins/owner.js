@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn }) => {
   let caption = `
-*「 معلومات عن صاحب البوت 」*
+*「 هذه معلومات ميدو 」*
 
 *Number :*\nwa.me/249128749239
 *instagram:*\ninstagram.com/mido
