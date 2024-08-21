@@ -1,0 +1,29 @@
+```python
+import random
+from flask import Flask, request
+from twilio.rest import Client
+
+app = Flask(*name*)
+
+account_sid = 'YOUR_ACCOUNT_SID'
+auth_token = 'YOUR_AUTH_TOKEN'
+client = Client(account_sid, auth_token)
+
+emojis = ['😀', '😂', '😍', '😎', '🤔', '😢', '😡', '🎉', '👍', '👋', '💔', '🌟', '🔥', '✨', '💯']
+
+@app.route('/whatsapp', methods=['POST'])
+def reply():
+    incoming_msg = request.values.get('Body', '').strip()
+    random_emoji = random.choice(emojis)
+
+    message = client.messages.create(
+        body=random_emoji,
+        from_='whatsapp:+YOUR_TWILIO_NUMBER',
+        to='whatsapp:+RECIPIENT_NUMBER'
+    )
+
+    return '', 200
+
+if *name* == '*main*':
+    app.run(debug=True)
+```
